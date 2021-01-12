@@ -49,6 +49,10 @@ const survey_labels_places_infections = [
   'Parks'
 ]
 
+const placesMap_explanation ='Heat map of places where people meet in Munich such as supermarkets, shops, parks among others'
+const placesMap_title ='Businesses in Munich'
+
+
 const safety_score_title_before = 'Safety Scores Pandemic Before'
 const safety_score_title_after = 'Safety Scores Pandemic After'
 
@@ -98,6 +102,9 @@ const Body = () =>  {
         <div class="divider"></div>
         <br/>
         <div className='section'>
+          <div className='row'>
+            <MapCard map={placesMap} explanation={placesMap_explanation} title={placesMap_title}/>
+          </div>
           <div className='row'>
             <div className='col s6'>
               <MapCard map={beforeMapSafety} explanation={beforeMapSafetyExplanation} title={beforeMapSafetyTitle}/>
