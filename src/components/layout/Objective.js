@@ -14,9 +14,9 @@ const Objectives = () => {
       </div>
       <div class="card-tabs">
         <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a class="active" href="#test6">Introduction</a></li>
           <li class="tab"><a href="#test4">Objectives</a></li>
-          <li class="tab"><a class="active" href="#test5">Methodology</a></li>
-          <li class="tab"><a href="#test6">Quick Insights</a></li>
+          <li class="tab"><a  href="#methodology">Methodology</a></li>
         </ul>
       </div>
       <div class="card-content grey lighten-4">
@@ -27,13 +27,15 @@ const Objectives = () => {
           Through a series of mapas that show the before and after of safety perception within the city.
           </p>
         </div>
-        <div id="test5">
+        <div id="methodology">
           <p>
-          To understand how Covid-19 has reshaped our perception of safety towards our city we surveyed people living in Munich area. The survey contained
-          questions that looked into rating amongst a preselected list which spaces people thought were more or less safe. After we obtained from OpenStreet map all
-          places that were within the categories of the places listed such as: parks, restaurants, cinemas, theaters among others. After we alocated a score to each place
-          based on the answers of the citizents that participated in the survey. We then aggregated the results and divide the resulting values with the district area to have a
-          relative safety index.
+          The data used in this project contains two parts, one is the online survey and the other is the Open Street Map data within the categories of places.
+          To better summarize the results, the we reclassified the places to 10 categories first.
+          Then we surveyed people living in Munich area to understand how Covid-19 has reshaped our perception of safety towards our city.
+          The survey contained questions that looked into rating the safety level amongst a preselected list of spaces.
+          Afterwards we allocated scores to each type of place based on the answers of survey respondents.
+          Then we aggregated the scores of all kinds of places and divided it with the district area to have a relative safety index.
+          We also did the same process to understand frequency of attendance and how this has changed due to the pandemic.
           </p>
           <br/>
           <p>
@@ -42,6 +44,10 @@ const Objectives = () => {
         </div>
         <div id="test6">
           <p>
+          As there has been a strong impact of both physical and psychological on human beings due to the current public health situation,
+          there is a need to visualize these changes in regards to our daily interactions with urban physical spaces. We chose safety perception
+          of different places as our main topic and employ it to have a better understanding of ourselves and feeling of the urban environment.
+          In order to reflect in a good manner of the challenges people have faced during the pandemic, we use before and after maps to help telling the story.
           </p>
         </div>
       </div>

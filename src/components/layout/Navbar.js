@@ -11,13 +11,14 @@ const Navbar = () => {
       <nav style ={{ marginBottom: '30px', height:'6rem'}} className='blue lighten-3'>
         <div className ='nav-wrapper'>
           <ul >
-            <li className='left' style={{margin :'1rem'}}>
-              <h5>Covid Reshaping Safety</h5>
-            </li>
-            <li className="right">
+            <li className="left">
               <div href="/">
-                <img  style={style1} width='170' alt='logo' src={carto_logo}></img>
+                <img  style={style1} width='190' alt='logo' src={carto_logo}></img>
               </div>
+            </li>
+            <li className='center' style={{margin :'1rem'}}>
+              <h5>                    CONVID RESHAPING PERCEPTION OF SAFETY</h5>
+              <h6>                    By Jose Pablo Ceballos Cantu, Zhuo Yang</h6>
             </li>
             <li className="right">
               <div className="right" style={style}>
