@@ -16,7 +16,7 @@ const MapCard = ({map, explanation, title}) => {
   return(
     <div className='col s12'>
       <div className = 'card'>
-        <div className = 'card-image hoverable materialboxed'>
+        <div className = 'card-image hoverable materialboxed grey lighten-5'>
               <a><img className='responsive-img'  src={map}></img></a>
         </div>
         <div className='card-content hoverable'>
