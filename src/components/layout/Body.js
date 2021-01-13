@@ -24,7 +24,7 @@ const afterMapSafetyExplanation = 'This maps displays on a custome scale which d
 const beforeMapFrequencyTitle = 'Frequency of attendance by Munich Administrative Region Before the Pandemic'
 const beforeMapFrequencyExplanation = 'This maps displays on a custome scale which districts in Munich according to public opinion were most likely visited by citizens BEFORE the pandemic'
 
-const afterMapFrequencyTitle = 'Frequency of attendance by Munich Administrative Region Before the Pandemic'
+const afterMapFrequencyTitle = 'Frequency of attendance by Munich Administrative Region Durning the Pandemic'
 const afterMapFrequencyExplanation = 'This maps displays on a custome scale which districts in Munich according to public opinion were most likely visited by citizens DURING the pandemic Travelling frequencies decreased but not very remarkably after the outbreak of COVID-19. The general travelling frequencies declined as many districts are with light colors during the pandemic, but the central area of Munich still shows a higher level of frequency especially 1(Altstadt-Lehel), 2(Ludwigsvorstadt-Isarvorstadt), 3(Maxvorstadt), 4(Schwabing-West), 5(Au-Haidhausen).'
 
 
@@ -53,12 +53,12 @@ const placesMap_explanation ='Heat map of places where people meet in Munich suc
 const placesMap_title ='Businesses in Munich'
 
 
-const safety_score_title_before = 'Safety Scores Pandemic Before'
-const safety_score_title_after = 'Safety Scores Pandemic After'
+const safety_score_title_before = 'Safety Scores Pandemic Before Covid-19'
+const safety_score_title_after = 'Safety Scores Pandemic During Covid-19'
 
 
 const biggest_safety_concern_before_title = 'Biggest Safety Concerns Before Covid-19'
-const biggest_safety_concern_after_title = 'Biggest Safety Concerns After Covid-19'
+const biggest_safety_concern_after_title = 'Biggest Safety Concerns During Covid-19'
 
 const biggest_safety_concern_labels = ['Physical health','Mental health','Others','Robbery','Sexual assault','Rioting']
 const biggest_safety_concern_labels_during = ['Physical health','Mental health','Rioting','Robbery','Sexual assault']
@@ -139,6 +139,9 @@ const Body = () =>  {
             color = {color_during}
             />
           <div>
+          <br/>
+          <br/>
+
           <div className='row'>
             <div className='col s6'>
             <BarChart
