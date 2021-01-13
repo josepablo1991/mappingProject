@@ -12,7 +12,7 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
   let barColor = color
   let max_c;
 
-  console.log(max);
+  // console.log(max);
 
   useEffect( () => {
     if(data){
@@ -20,7 +20,7 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
          labels: prop_labels,
        datasets: [
            {
-               label: 'Main places of infections',
+               label: 'Number of Answers',
                data: data,
                backgroundColor: color,
                borderWidth: 3
@@ -48,7 +48,7 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
     ]
     });
 
-    console.log(max_c);
+    // console.log(max_c);
 
     // set options
   const [barOptions, setBarOptions] = useState({
@@ -70,7 +70,7 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
             {
               scaleLabel: {
                 display: true,
-                labelString: 'Colonias'
+                labelString: ''
               }
             }
         ]
@@ -89,7 +89,7 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
 
   // return JSX
   return (
-    <div className="Bar example">
+    <div className="Bar example materialboxed hoverable grey lighten-5">
         <Bar
             data={barData}
             options={barOptions.options} />

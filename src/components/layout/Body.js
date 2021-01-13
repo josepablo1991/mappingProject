@@ -130,50 +130,61 @@ const Body = () =>  {
           <br/>
           <div class="divider"></div>
           <br/>
-          <div className='col s12'>
-            <BarChart
-              data={survey_data_places_infections}
-              prop_labels={survey_labels_places_infections}
-              title={survey_places_infections_title}
-              max={max_default}
-              color = {color_during}
-              />
-          </div>
-          <div className ='col s12'>
+          <div className='row'>
+          <BarChart
+            data={survey_data_places_infections}
+            prop_labels={survey_labels_places_infections}
+            title={survey_places_infections_title}
+            max={max_default}
+            color = {color_during}
+            />
+          <div>
+          <div className='row'>
+            <div className='col s6'>
             <BarChart
               data={biggest_safety_concern_before_data}
               prop_labels={biggest_safety_concern_labels}
               title={biggest_safety_concern_before_title}
               max={max_default}
               color = {color_before}
-            />
+              />
+            </div>
+            <div className ='col s6'>
+              <BarChart
+                data={biggest_safety_concern_after_data}
+                prop_labels={biggest_safety_concern_labels_during}
+                title={biggest_safety_concern_after_title}
+                max={max_default}
+                color = {color_during}
+              />
+            </div>
           </div>
         </div>
-        <div>
-          <BarChart
-            data={biggest_safety_concern_after_data}
-            prop_labels={biggest_safety_concern_labels_during}
-            title={biggest_safety_concern_after_title}
-            max={max_default}
-            color = {color_during}
-            />
+        <div className ='row'>
+          <div className='col s6'>
           <BarChart
             data={safety_score_before}
             prop_labels={safety_score_labels_before}
             title={safety_score_title_before}
             max={safety_max}
             color = {color_before}
-          />
-          <BarChart
-            data={safety_score_during}
-            prop_labels={safety_score_labels_during}
-            title={safety_score_title_after}
-            max={safety_max}
-            color = {color_during}
-          />
+            />
+          </div>
+          <div className='col s6'>
+            <BarChart
+              data={safety_score_during}
+              prop_labels={safety_score_labels_during}
+              title={safety_score_title_after}
+              max={safety_max}
+              color = {color_during}
+            />
+          </div>
+        </div>
+        </div>
         </div>
       </div>
     </div>
+
   )
 }
 

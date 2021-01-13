@@ -19,8 +19,8 @@ const MapCard = ({map, explanation, title}) => {
         <div className = 'card-image hoverable materialboxed grey lighten-5'>
               <a><img className='responsive-img'  src={map}></img></a>
         </div>
-        <div className='card-content hoverable'>
-          <span class="card-title center-align leftblack-text">{title}</span>
+        <div className='card-content hoverable materialboxed grey lighten-5'>
+          <span class="card-title center-align leftblack-text"><b>{title}</b></span>
           <p className='left-align valign-wrapper'>{explanation}</p>
         </div>
       </div>
