@@ -17,8 +17,15 @@ const Navbar = () => {
               </div>
             </li>
             <li className='center' style={{margin :'1rem'}}>
-              <h5>                    CONVID RESHAPING PERCEPTION OF SAFETY</h5>
-              <h6>                    By Jose Pablo Ceballos Cantu, Zhuo Yang</h6>
+              <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              COVID RESHAPING PERCEPTION OF SAFETY</h5>
+              <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              By Zhuo Yang Jose Pablo Ceballos Cantu</h6>
             </li>
             <li className="right">
               <div className="right" style={style}>

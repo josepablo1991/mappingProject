@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import MapCard from './MapCard';
 import BarChart from '../charts/BarChart';
+import BarChart_2 from '../charts/BarChart_2';
+
 import MapImage from './MapImage'
 import Objectives from './Objective';
 
@@ -67,6 +69,7 @@ const biggest_safety_concern_labels_during = ['Physical health','Mental health',
 const survey_data_places_infections = [63,56,51,47,46,45,35,32,29,21,8,3]
 const biggest_safety_concern_before_data = [31,27,17,13,13,3]
 const biggest_safety_concern_after_data = [55,38,10,1,1,0]
+const biggest_safety_concern_before_max = 60;
 
 const safety_score_labels_during = ['Gyms and Pools','Cinema, Theater, Stadiums','Hospitals and medical practices','Public Transport','Restaurants, Bars, Cafes','Schools','Supermarker','Workplace','Parks']
 const safety_score_during = [6.2,6.1,6.1,6,5.6,4.9,4.8,4.2,3.3]
@@ -144,16 +147,16 @@ const Body = () =>  {
 
           <div className='row'>
             <div className='col s6'>
-            <BarChart
+            <BarChart_2
               data={biggest_safety_concern_before_data}
               prop_labels={biggest_safety_concern_labels}
               title={biggest_safety_concern_before_title}
-              max={max_default}
+              max={biggest_safety_concern_before_max}
               color = {color_before}
               />
             </div>
             <div className ='col s6'>
-              <BarChart
+              <BarChart_2
                 data={biggest_safety_concern_after_data}
                 prop_labels={biggest_safety_concern_labels_during}
                 title={biggest_safety_concern_after_title}
@@ -164,7 +167,7 @@ const Body = () =>  {
           </div>
         </div>
         <div className ='row'>
-          <div className='col s6'>
+          <div className='col s6' height="100%">
           <BarChart
             data={safety_score_before}
             prop_labels={safety_score_labels_before}
@@ -173,7 +176,7 @@ const Body = () =>  {
             color = {color_before}
             />
           </div>
-          <div className='col s6'>
+          <div className='col s6' height="100%">
             <BarChart
               data={safety_score_during}
               prop_labels={safety_score_labels_during}
