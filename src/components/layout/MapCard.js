@@ -20,7 +20,7 @@ const MapCard = ({map, explanation, title}) => {
               <a><img className='responsive-img'  src={map}></img></a>
         </div>
         <div className='card-content hoverable materialboxed grey lighten-5'>
-          <span class="card-title center-align leftblack-text"><b>{title}</b></span>
+          <span class="card-title center-align leftblack-text" style={{fontSize:'1.2vw'}}><b>{title}</b></span>
           <p className='left-align valign-wrapper'>{explanation}</p>
         </div>
       </div>
