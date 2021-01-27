@@ -21,7 +21,7 @@ const MapCard = ({map, explanation, title}) => {
         </div>
         <div className='card-content hoverable materialboxed grey lighten-5'>
           <span class="card-title center-align leftblack-text" style={{fontSize:'1.2vw'}}><b>{title}</b></span>
-          <p className='left-align valign-wrapper'>{explanation}</p>
+          <p className='left-align valign-wrapper' style={{fontSize:'1.2vw'}}>{explanation}</p>
         </div>
       </div>
     </div>
