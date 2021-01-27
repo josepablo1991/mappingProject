@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return(
     <div className='container'>
-      <nav style ={{ marginBottom: '30px', height:'6rem'}} className='blue lighten-3'>
+      <nav className='blue lighten-3' style ={{ marginBottom: '30px', height:'6rem', paddingBottom:'50px'}}>
         <div className ='nav-wrapper'>
           <ul >
             <li className="left">
@@ -16,20 +16,24 @@ const Navbar = () => {
                 <img  style={style1} width='190' alt='logo' src={carto_logo}></img>
               </div>
             </li>
-            <li className='center' style={{margin :'1rem'}}>
-              <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              COVID RESHAPING PERCEPTION OF SAFETY</h5>
-              <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              By Zhuo Yang Jose Pablo Ceballos Cantu</h6>
+            <li style={{margin :'1rem'}}>
+                <h5 style={{fontSize:'1.2vw'}}>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  COVID RESHAPING PERCEPTION OF SAFETY</h5>
+                <h6 style={{fontSize:'1.2vw'}}>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  By Zhuo Yang & Jose Pablo Ceballos Cantu
+                  </h6>
             </li>
             <li className="right">
-              <div className="right" style={style}>
-                <img width='80' alt='logo' src={logo}></img>
+              <div className="right responsive-img" style={style}>
+                <img  width='80' alt='logo' src={logo}></img>
               </div>
             </li>
           </ul>
