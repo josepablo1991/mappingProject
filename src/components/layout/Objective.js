@@ -9,17 +9,17 @@ const Objectives = () => {
       </div>
       <div class="card-tabs">
         <ul class="tabs tabs-fixed-width hoverable">
-          <li className="tab"><a className="active" href="#test6">Introduction</a></li>
-          <li className="tab"><a href="#test4">Objectives</a></li>
+          <li className="tab"><a className="active" href="#Introduction">Introduction</a></li>
+          <li className="tab"><a href="#Objectives">Objectives</a></li>
           <li className="tab"><a  href="#methodology">Methodology</a></li>
           <li className="tab"><a  href="#conclusions">Conclusions</a></li>
         </ul>
       </div>
       <div class="card-content grey lighten-4 hoverable">
-        <div id="test4">
+        <div id="Objectives">
           <p>
           Since, there is little discussion between the relationship of safety perception and physical environment in
-          cities. People tend to have different feelings when they enter different physical spaces.The main objective is to convey how COVID-19 has changed our perception and interaction with the city.
+          cities. People tend to have different feelings when they enter different physical spaces. The main objective is to convey how COVID-19 has changed our perception and interaction with the city.
           Through a series of maps that show the before and after of safety perception within the city.
           </p>
         </div>
@@ -49,7 +49,7 @@ const Objectives = () => {
 
           </p>
         </div>
-        <div id="test6">
+        <div id="Introduction">
           <p>
           Due to the current public health situation there has been a radical shift of perception and safety in regards to
           public places having an impact both physically and psychologically. There is a need to visualize this change
@@ -58,8 +58,6 @@ const Objectives = () => {
           </p>
           <br/>
           <p>
-          As there has been a strong impact on both physical and psychological health due to the pandemic, a radical shift of safety perception towards public places has occurred.
-
           To best reflect and understand these changes  that people have faced during this pandemic, we have used a series of  “Before” & “After” choropleth maps to help tell the story.
           </p>
         </div>
