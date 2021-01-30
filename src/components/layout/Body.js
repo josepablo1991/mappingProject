@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import MapCard from './MapCard';
 import BarChart from '../charts/BarChart';
-import BarChart_2 from '../charts/BarChart_2';
 
 import MapImage from './MapImage'
 import Objectives from './Objective';
@@ -54,11 +53,11 @@ const survey_labels_places_infections = [
 const placesMap_explanation ='Heat map of places where people meet in Munich such as supermarkets, shops, parks among others'
 const placesMap_title ='Businesses in Munich'
 
-
+const safety_score_main_title = 'Scoring Safety of Places'
 const safety_score_title_before = 'Safety Scores Pandemic Before Covid-19'
 const safety_score_title_after = 'Safety Scores Pandemic During Covid-19'
 
-
+const biggest_safety_concern_main_title = 'Main Concers Regarding Safety'
 const biggest_safety_concern_before_title = 'Biggest Safety Concerns Before Covid-19'
 const biggest_safety_concern_after_title = 'Biggest Safety Concerns During Covid-19'
 
@@ -68,17 +67,28 @@ const biggest_safety_concern_labels_during = ['Physical health','Mental health',
 
 const survey_data_places_infections = [63,56,51,47,46,45,35,32,29,21,8,3]
 const biggest_safety_concern_before_data = [31,27,17,13,13,3]
-const biggest_safety_concern_after_data = [55,38,10,1,1,0]
+const biggest_safety_concern_after_data = [55,38,0,1,1,10]
 const biggest_safety_concern_before_max = 60;
 
 const safety_score_labels_during = ['Gyms and Pools','Cinema, Theater, Stadiums','Hospitals and medical practices','Public Transport','Restaurants, Bars, Cafes','Schools','Supermarker','Workplace','Parks']
-const safety_score_during = [6.2,6.1,6.1,6,5.6,4.9,4.8,4.2,3.3]
+const safety_score_during = [6,6.1,6.1,5.6,4.8,4.9,6.2,4.2,4.9,3.3]
 
-const safety_score_labels_before = ['Public transport','Cinema, Theater, Stadiums','Hospital and medical practices','Restaurants, Bars, Cafes','Supermarket','Schools','Gyms and Pools','Workplace','Cinemas, Stadiums','Shops','Parks']
+const safety_score_labels_before = ['Public transport','Cinema, Theater, Stadiums','Hospital and medical practices','Restaurants, Bars, Cafes','Supermarket','Schools','Gyms and Pools','Workplace','Shops','Parks']
 
 const safety_score_before = [3.3,2.8,2.5,2.5,2.2,2.4,2.1,2.1,2.1,2.4]
-const max_default = 'default'
+const max_default = 70
 const safety_max = 10;
+
+
+const frequency_labels = ['Public transport','Cinema, Theater, Stadiums','Restaurants, Bars, Cafes','Supermarket','Gyms and Pools','Shops','Parks']
+const frequency_data_before = [8.2,1.8,4.1,6.9,3.2,4.2,5.3]
+const frequency_title_before = 'Frequency of visit Before Covid-19'
+const frequency_title_during = 'Frequency of visit During Covid-19'
+const frequency_data_during = [5.2,1,1.7,6,1.5,2.6,5.2]
+const frequency_main_title = 'Scoring Frequency of Visit'
+
+const type_score = 'Average Score';
+const type_number_answers = 'Number of Answers'
 
 
 const Body = () =>  {
@@ -96,7 +106,6 @@ const Body = () =>  {
   return(
     <div>
       <div className='container'>
-        <h5 className='center'>About the Project</h5>
         <Objectives/>
       </div>
       <div className='container'>
@@ -129,7 +138,7 @@ const Body = () =>  {
         </div>
         <div class="divider"></div>
         <div className='section'>
-          <h5 className='center'><u>Graphical Results</u></h5>
+          <h5 className='center' id='Results'><u>Graphical Results</u></h5>
           <br/>
           <div class="divider"></div>
           <br/>
@@ -140,49 +149,57 @@ const Body = () =>  {
             title={survey_places_infections_title}
             max={max_default}
             color = {color_during}
+            type={type_number_answers}
             />
           <div>
           <br/>
           <br/>
-
-          <div className='row'>
-            <div className='col s6'>
-            <BarChart_2
-              data={biggest_safety_concern_before_data}
-              prop_labels={biggest_safety_concern_labels}
-              title={biggest_safety_concern_before_title}
-              max={biggest_safety_concern_before_max}
-              color = {color_before}
-              />
-            </div>
-            <div className ='col s6'>
-              <BarChart_2
-                data={biggest_safety_concern_after_data}
-                prop_labels={biggest_safety_concern_labels_during}
-                title={biggest_safety_concern_after_title}
-                max={max_default}
-                color = {color_during}
-              />
-            </div>
-          </div>
         </div>
         <div className ='row'>
-          <div className='col s6' height="100%">
+          <div className='col s12' height="100%">
           <BarChart
             data={safety_score_before}
             prop_labels={safety_score_labels_before}
-            title={safety_score_title_before}
+            title={safety_score_main_title}
+            label1={safety_score_title_before}
+            label2={safety_score_title_after}
             max={safety_max}
             color = {color_before}
+            data2 = {safety_score_during}
+            color2 = {color_during}
+            type = {type_score}
             />
           </div>
-          <div className='col s6' height="100%">
-            <BarChart
-              data={safety_score_during}
-              prop_labels={safety_score_labels_during}
-              title={safety_score_title_after}
-              max={safety_max}
-              color = {color_during}
+        </div>
+        <div className ='row'>
+          <div className='col s12' height="100%">
+          <BarChart
+            data={biggest_safety_concern_before_data}
+            prop_labels={biggest_safety_concern_labels}
+            title={biggest_safety_concern_main_title}
+            label1={biggest_safety_concern_before_title}
+            label2={biggest_safety_concern_after_title}
+            max={biggest_safety_concern_before_max}
+            color = {color_before}
+            data2 = {biggest_safety_concern_after_data}
+            color2 = {color_during}
+            type = {type_number_answers}
+            />
+          </div>
+        </div>
+        <div className ='row'>
+          <div className='col s12' height="100%">
+          <BarChart
+            data={frequency_data_before}
+            prop_labels={frequency_labels}
+            title={frequency_main_title}
+            label1={frequency_title_before}
+            label2={frequency_title_during}
+            max={safety_max}
+            color = {color_before}
+            data2 = {frequency_data_during}
+            color2 = {color_during}
+            type = {type_score}
             />
           </div>
         </div>
@@ -195,3 +212,15 @@ const Body = () =>  {
 }
 
 export default Body;
+
+
+
+// <div className='col s6' height="100%">
+//   <BarChart
+//     data={safety_score_during}
+//     prop_labels={safety_score_labels_during}
+//     title={safety_score_title_after}
+//     max={safety_max}
+//     color = {color_during}
+//   />
+// </div>

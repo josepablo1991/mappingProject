@@ -4,7 +4,7 @@ import { Bar, Line, Pie } from 'react-chartjs-2';
 
 
 
-const BarChart = ({data, prop_labels,title, max, color}) => {
+const BarChart = ({data, prop_labels,title, max, color, data2, general_label, color2,label1,label2,type }) => {
 
   let labels = [];
   let data_points = [];
@@ -15,18 +15,36 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
   // console.log(max);
 
   useEffect( () => {
-    if(data){
+    if(data2){
        setBarData({
          labels: prop_labels,
        datasets: [
            {
-               label: 'Number of Answers',
+               label: label1,
                data: data,
                backgroundColor: color,
                borderWidth: 3
-          }
+          },
+          {
+              label: label2,
+              data: data2,
+              backgroundColor: color2,
+              borderWidth: 3
+         },
         ]
        });
+    } else {
+      setBarData({
+        labels: prop_labels,
+      datasets: [
+          {
+              label: 'Number of Answers',
+              data: data,
+              backgroundColor: color,
+              borderWidth: 3
+         }
+       ]
+      });
     }
   },[data,max])
 
@@ -44,7 +62,7 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
                 'rgba(75, 192, 192, 0.9)'
             ],
             borderWidth: 3
-                  }
+        }
     ]
     });
 
@@ -58,11 +76,11 @@ const BarChart = ({data, prop_labels,title, max, color}) => {
             {
               ticks: {
                 beginAtZero: true,
-                suggestedMax:10
+                suggestedMax:max
               },
               scaleLabel: {
                 display: true,
-                labelString: 'Number of Answers'
+                labelString: type
               }
             }
         ],

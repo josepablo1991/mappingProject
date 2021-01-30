@@ -4,27 +4,23 @@ const Objectives = () => {
 
   return(
     <div class="card">
-      <div class="card-content">
-        <p>
-          Due to the current public health situation there has been a radical shift of perception and safety in regards to
-          public places having an impact both physically and psychologically. There is a need to visualize this change
-          and reflect on the influence that it has in our daily interactions with our city. This visualization will also reflect
-          in a good manner the challenges people have faced during this pandemic.
-        </p>
+      <div class="card-content center-align hoverable">
+        <h6>Project Overview</h6>
       </div>
       <div class="card-tabs">
-        <ul class="tabs tabs-fixed-width">
-          <li class="tab"><a class="active" href="#test6">Introduction</a></li>
-          <li class="tab"><a href="#test4">Objectives</a></li>
-          <li class="tab"><a  href="#methodology">Methodology</a></li>
+        <ul class="tabs tabs-fixed-width hoverable">
+          <li className="tab"><a className="active" href="#test6">Introduction</a></li>
+          <li className="tab"><a href="#test4">Objectives</a></li>
+          <li className="tab"><a  href="#methodology">Methodology</a></li>
+          <li className="tab"><a  href="#conclusions">Conclusions</a></li>
         </ul>
       </div>
-      <div class="card-content grey lighten-4">
+      <div class="card-content grey lighten-4 hoverable">
         <div id="test4">
           <p>
           Since, there is little discussion between the relationship of safety perception and physical environment in
           cities. People tend to have different feelings when they enter different physical spaces.The main objective is to convey how COVID-19 has changed our perception and interaction with the city.
-          Through a series of mapas that show the before and after of safety perception within the city.
+          Through a series of maps that show the before and after of safety perception within the city.
           </p>
         </div>
         <div id="methodology">
@@ -39,15 +35,32 @@ const Objectives = () => {
           </p>
           <br/>
           <p>
-          We also did the same process to understand frequency of attendance and how this has changed due to the pandemic.
+          We also did the same process to understand frequency of attendance and how this has changed due to the pandemic. <span><a className='hoverable round' href='#Results'><strong>Graphic Results</strong></a></span>
+          </p>
+        </div>
+        <div id="conclusions">
+          <p>
+          Overall, people worry more after the pandemic as they concern mainly about their physical and
+          mental health conditions. In the mean time, people also tend to think that places which are
+          more concurred and have more indoor activities are less safe. General safety perception decreased
+          a lot with the exception of parks. This may bring some insights about urban environment construction
+          and public health risks management for decision-makers. Also, helps citizens to have a better understanding
+          of the change they have experienced towards what it means to be “Safe”.
+
           </p>
         </div>
         <div id="test6">
           <p>
-          As there has been a strong impact of both physical and psychological on human beings due to the current public health situation,
-          there is a need to visualize these changes in regards to our daily interactions with urban physical spaces. We chose safety perception
-          of different places as our main topic and employ it to have a better understanding of ourselves and feeling of the urban environment.
-          In order to reflect in a good manner of the challenges people have faced during the pandemic, we use before and after maps to help telling the story.
+          Due to the current public health situation there has been a radical shift of perception and safety in regards to
+          public places having an impact both physically and psychologically. There is a need to visualize this change
+          and reflect on the influence that it has in our daily interactions with our city. This visualization will also reflect
+          in a good manner the challenges people have faced during this pandemic.
+          </p>
+          <br/>
+          <p>
+          As there has been a strong impact on both physical and psychological health due to the pandemic, a radical shift of safety perception towards public places has occurred.
+
+          To best reflect and understand these changes  that people have faced during this pandemic, we have used a series of  “Before” & “After” choropleth maps to help tell the story.
           </p>
         </div>
       </div>
